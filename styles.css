@@ -1,0 +1,107 @@
+:root {
+  --white-solid: rgb(229, 228, 226);
+  --white-80: rgba(229, 228, 226, 0.8);
+  --white-60: rgba(229, 228, 226, 0.6);
+  --white-40: rgba(229, 228, 226, 0.4);
+  --white-20: rgba(229, 228, 226, 0.2);
+  --white-10: rgba(229, 228, 226, 0.1);
+  --white-05: rgba(229, 228, 226, 0.05);
+
+  --NODS-Green-solid: rgb(34, 92, 53);
+  --NODS-Green-80: rgba(34, 92, 53, 0.8);
+  --NODS-Green-60: rgba(34, 92, 53, 0.6);
+  --NODS-Green-40: rgba(34, 92, 53, 0.4);
+  --NODS-Green-30: rgba(34, 92, 53, 0.3);
+  --NODS-Green-20: rgba(34, 92, 53, 0.2);
+  --NODS-Green-10: rgba(34, 92, 53, 0.1);
+  --NODS-Green-05: rgba(34, 92, 53, 0.05);
+}
+
+@keyframes title-font-shadow {
+  0% {
+    text-shadow: -0.2rem -0.2rem 1rem var(--white-05);
+  }
+  10% {
+    text-shadow: -0.2rem -0.2rem 1rem var(--white-10);
+  }
+  20% {
+    text-shadow: -0.2rem -0.2rem 1rem var(--white-20);
+  }
+  30% {
+    text-shadow: -0.2rem -0.2rem 1rem var(--white-05);
+  }
+  40% {
+    text-shadow: -0.2rem -0.2rem 1rem var(--white-20);
+  }
+  50% {
+    text-shadow: -0.2rem -0.2rem 1rem var(--white-40);
+  }
+  60% {
+    text-shadow: -0.2rem -0.2rem 1rem var(--white-20);
+  }
+  70% {
+    text-shadow: -0.2rem -0.2rem 1rem var(--white-60);
+  }
+  80% {
+    text-shadow: -0.2rem -0.2rem 1rem var(--white-40);
+  }
+  90% {
+    text-shadow: -0.2rem -0.2rem 1rem var(--white-80);
+  }
+  100% {
+    text-shadow: -0.2rem -0.2rem 1rem var(--white-solid);
+  }
+}
+
+body {
+  display: grid;
+  grid-template-columns: 20% 60% 20%;
+  grid-template-rows: 30% 60% 10%;
+  grid-template-areas: "header header header" "nav article aside" "footer footer footer";
+  align-items: center;
+  background-color: black;
+}
+
+.header {
+  grid-area: header;
+}
+
+h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10rem;
+  font-weight: 200;
+  font-style: normal;
+  color: black;
+  padding: 2rem 4rem 3rem;
+  border-radius: 2rem;
+  text-align: center;
+  animation-name: title-font-shadow;
+  animation-duration: 10s;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+.nav {
+  grid-area: nav;
+  background-color: aqua;
+  min-height: 200vh;
+}
+
+.article {
+  grid-area: article;
+  background-color: brown;
+  min-height: 200vh;
+}
+
+.aside {
+  grid-area: aside;
+  background-color: coral;
+  min-height: 200vh;
+}
+
+.footer {
+  grid-area: footer;
+  background-color: darkgray;
+  min-height: 10vh;
+}
